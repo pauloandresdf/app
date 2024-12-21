@@ -67,7 +67,9 @@
         const musica = document.getElementById("musica")
         button.addEventListener("click", () => {
             gif.style.display = "block";
-            musica.play();
+            musica.play().catch(error => {
+                console.error("Erro ao reproduzir a música:", error);
+            });
         });
     </script>
 </body>
